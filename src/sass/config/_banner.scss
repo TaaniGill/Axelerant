@@ -1,0 +1,49 @@
+.banner {
+  background: url('../../img/Layer1.png') no-repeat top left transparent;
+  min-height: 600px;
+  margin: -70px 0;
+  overflow: hidden;
+}
+
+.banner-flex-container {
+  width: 590px;
+  margin: 200px auto;
+  h1 {
+    color: #fff;
+    margin: 20px 80px;
+    font-weight: 500;
+  }
+}
+
+.landing-banner-items {
+  display: flex;
+  flex-direction: row;
+  .banner-item {
+    border: 1px solid #656363;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #fff;
+    span {
+      margin: 10px auto;
+    }
+    &:nth-child(2) {
+      border-left: 0;
+      border-right: 0;
+    }
+  }
+}
+
+@media all and (max-width: 990px) {
+  .landing-banner-items {
+    flex-direction: column;
+    .banner-item {
+      flex-direction: row;
+      &:nth-child(2) {
+        border-left: 1px solid #656363;
+        border-right: 1px solid #656363;
+      }
+    }
+  }
+}

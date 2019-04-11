@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 8px 20px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+  list-style: none;
+  a.logo-name {
+    color: #fff;
+    text-decoration: none;
+    span {
+      color: $primary-color;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  a {
+    display: block;
+    padding: 1em;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar-toggle {
+  padding: 0px 10px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+  .icon-bar {
+    width: 25px;
+    height: 5px;
+    background-color: #ffffff;
+    display: block;
+    margin: 5px;
+  }
+}
+
+.contact-icon {
+  background: url(../../img/icon.png) no-repeat top left transparent;
+  display: none;
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin-top: 5px;
+}
+
+.navigation.active {
+  display: flex;
+}
+
+/* *********** media queries *********** */
+@media all and (max-width: 990px) {
+  .nav-flex-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .logo {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-toggle {
+    display: block;
+    float: left;
+  }
+  .contact-us,
+  .navigation {
+    display: none;
+  }
+  .contact-icon {
+    display: block;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    a {
+      font-size: 2em;
+    }
+  }
+}
+
+/* ****** ****** */
+@media all and (max-width: 600px) {
+  .logo {
+    margin: 0.25em 0;
+    align-self: left;
+  }
+  .contact-icon {
+    display: block;
+  }
+  .navigation {
+    flex-direction: column;
+  }
+  .navbar-toggle {
+    display: block;
+    float: left;
+  }
+
+  .contact-us,
+  .navigation {
+    display: none;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}

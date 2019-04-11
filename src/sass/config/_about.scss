@@ -1,0 +1,33 @@
+.about {
+  padding: 100px 50px 0 50px;
+  .about-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .about-text {
+      padding: 50px;
+      h3 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+    }
+    .about-map {
+      padding: 30px;
+      img {
+        width: 500px;
+      }
+    }
+  }
+}
+@media all and (max-width: 990px) {
+  .about {
+    .about-flex-container {
+      flex-direction: column;
+      .about-map {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

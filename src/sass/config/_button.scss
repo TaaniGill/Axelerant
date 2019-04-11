@@ -1,0 +1,23 @@
+$primary-color: #ef3b00;
+$font-color: #ffffff;
+
+@mixin button() {
+  border-radius: 20px;
+  color: $font-color;
+  font-size: 14px;
+  border: 1px solid $primary-color;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn-bgimg {
+  @include button();
+  padding: 8px 20px 8px 40px;
+  background: url('../../img/icon.png') no-repeat top 10px left 15px
+    $primary-color;
+}
+.btn-nobgimg {
+  @include button();
+  padding: 8px 20px;
+  background-color: $primary-color;
+}

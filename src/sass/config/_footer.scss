@@ -1,0 +1,20 @@
+.footer {
+  background-color: #000000;
+  color: #cccccc;
+  font-size: 12px;
+  padding: 30px;
+  .footer-flex-container {
+    display: flex;
+    justify-content: space-between;
+    @media all and (max-width: 990px) {
+      flex-direction: column;
+      text-align: center;
+    }
+    i {
+      margin-left: 8px;
+      @media all and (max-width: 990px) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
