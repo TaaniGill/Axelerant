@@ -31,7 +31,7 @@
 }
 
 .contct-flex-container {
-  color: #fff;
+  color: $font-color;
   z-index: 1;
   position: absolute;
   width: 100%;
@@ -53,7 +53,7 @@
         flex-direction: column;
       }
       input {
-        background-color: #fff;
+        background-color: $font-color;
         border: 1px solid #ccc;
         padding: 10px 17px;
         margin: 10px;

@@ -1,16 +1,20 @@
+$font-color: #ffffff;
 .banner {
   background: url('../../img/Layer1.png') no-repeat top left transparent;
-  min-height: 600px;
+  height: 600px;
   margin: -70px 0;
   overflow: hidden;
+  @media all and (max-width: 990px) {
+    height: 850px;
+  }
 }
 
 .banner-flex-container {
   width: 590px;
   margin: 200px auto;
   h1 {
-    color: #fff;
-    margin: 20px 80px;
+    color: $font-color;
+    margin: 20px 50px;
     font-weight: 500;
   }
 }
@@ -22,9 +26,10 @@
     border: 1px solid #656363;
     padding: 30px;
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
     justify-content: space-evenly;
-    color: #fff;
+    color: $font-color;
     span {
       margin: 10px auto;
     }
@@ -40,6 +45,7 @@
     flex-direction: column;
     .banner-item {
       flex-direction: row;
+      flex-basis: unset;
       &:nth-child(2) {
         border-left: 1px solid #656363;
         border-right: 1px solid #656363;
